@@ -1,0 +1,156 @@
+<% include partials/header %>
+<header>
+    </header>
+<main>
+    <div class="container">
+   
+     <div class="row justify-content-center">
+            <h1 style="text-align: center;">Bootstrap Login and Regitration forms</h1> 
+         <div class="col-lg-6 ml-auto" style="border-right:solid  1px black">
+                <form class="needs-validation " novalidate>
+                        <span> Don't have account? please Sign up at the right?</span>
+                        <h1>Sign in</h1>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Email address or Username</label>
+                          <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="inputGroupPrepend"><i class="fa fa-user"></i></span>
+                                </div>
+                             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email or Username" required>
+                        </div>
+                          <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                          <div class="invalid-feedback">
+                                Please enter a Email or username.
+                              </div> 
+                        </div>
+                        
+                        <div class="form-group">
+
+                          <label for="exampleInputPassword1">Password</label>
+                          <div class="input-group">
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text" id="inputGroupPrepend"><i class="fa fa-key"></i></span>
+                                </div>
+                          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+                          <div class="invalid-feedback">
+                                Please enter a Password.
+                              </div> 
+                        </div>
+                    </div>
+                    
+                        <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="remember-me">
+                                <label class="form-check-label" for="remeber-me">Remember me</label>
+                              </div>
+                        <div class="form-group">
+                          
+                           <label class="form-label" for="forgotpass"><a href="forgotpassword.ejs">Have you forget password?</a></label>
+                        </div>
+                        <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                        </div>
+                        <div class="form-group">
+                                <button type="submit" class="btn btn-outline-danger "><i class="fa fa-google-plus">&nbsp</i>Google</button>
+                                <button type="submit" class="btn btn-outline-primary"><i class="fa fa-facebook">&nbsp</i>Facebook</button>
+                                <button type="submit" class="btn btn-outline-primary"><i class="fa fa-twitter">&nbsp</i>Twitter</button>
+                        </div>  
+                      </form>
+         
+        </div>
+       
+        <div class="col-lg-6 ml-auto border-left float-right">
+                <form class="register needs-validation" novalidate>
+                        <div class="form-group">
+                            <span> Already have account? please login at the left.</span>
+                            <h1>Sign up</h1>
+                        </div>
+                          <div class="form-group">
+                              <label for="username">Username</label>
+                              <div class="input-group">
+                                    <div class="input-group-prepend">
+                                      <span class="input-group-text" id="inputGroupPrepend"><i class="fa fa-user"></i></span>
+                                    </div>
+                            <input type="text" class="form-control" placeholder="Username" required>
+                            <div class="invalid-feedback">
+                                    Please choose a username.
+                                  </div>
+                                  </div>
+                          </div>
+                          <div class="form-group">
+                                <label for="email">Email</label>
+                                <div class="input-group">
+                                        <div class="input-group-prepend">
+                                          <span class="input-group-text" id="inputGroupPrepend"><i class="fa fa-envelope"></i></span>
+                                        </div>
+                                <input type="email" class="form-control" placeholder="Email" required>
+                                <div class="invalid-feedback">
+                                        Please choose a Email.
+                                      </div>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <div class="input-group">
+                                            <div class="input-group-prepend">
+                                              <span class="input-group-text" id="inputGroupPrepend"><i class="fa fa-key"></i></span>
+                                            </div>
+                                    <input type="password" class="form-control" placeholder="Password" aria-describedby="passwordHelpInline" required>
+                                </div>
+                                    <small id="passwordHelpInline" class="text-muted">
+                                            Must be 8-20 characters long.
+                                          </small>
+                                          <div class="invalid-feedback">
+                                                Please choose a Password.
+                                              </div> 
+                                       
+                                  </div>
+                                  <div class="form-group">
+                                        <label for="password">Retype Password</label>
+                                        <input type="password" class="form-control" placeholder="Retype Password" required>
+                                      </div>
+                                  <div class="form-group">
+                                            <div class="form-check">
+                                              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                              <label class="form-check-label" for="invalidCheck">
+                                                Agree to terms and conditions
+                                              </label>
+                                              <div class="invalid-feedback">
+                                                You must agree before submitting.
+                                              </div>
+                                            </div>
+                                          </div>
+                                  <div class="form-group">
+                                        <button type="submit" class="btn btn-primary btn-block">Sign up</button>
+                                </div>
+                              
+    
+                      </form>
+                      <script>
+                            // Example starter JavaScript for disabling form submissions if there are invalid fields
+                            (function() {
+                              'use strict';
+                              window.addEventListener('load', function() {
+                                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                var forms = document.getElementsByClassName('needs-validation');
+                                // Loop over them and prevent submission
+                                var validation = Array.prototype.filter.call(forms, function(form) {
+                                  form.addEventListener('submit', function(event) {
+                                    if (form.checkValidity() === false) {
+                                      event.preventDefault();
+                                      event.stopPropagation();
+                                    }
+                                    form.classList.add('was-validated');
+                                  }, false);
+                                });
+                              }, false);
+                            })();
+                            </script>
+                   
+        </div>
+    </div>    
+          
+  
+
+    </div>
+</main>
+<% include partials/footer %>

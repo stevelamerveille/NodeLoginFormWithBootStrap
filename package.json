@@ -1,0 +1,32 @@
+{
+  "name": "nodeloginform",
+  "version": "1.0.0",
+  "description": "node login form",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "login",
+    "registration"
+  ],
+  "author": "Steve",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.10",
+    "save": "^2.4.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevelamerveille/NodeLoginFormWithBootStrap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stevelamerveille/NodeLoginFormWithBootStrap/issues"
+  },
+  "homepage": "https://github.com/stevelamerveille/NodeLoginFormWithBootStrap#readme"
+}
